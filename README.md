@@ -15,10 +15,13 @@ Doporučujeme otevřít projekt z&nbsp;repozitáře:
     ![Při otevření IDEI na úvodní obrazovce zvol "Get from VCS"...](img/git_open-repo_02_get-from-vcs.png)
 3. Zadej adresu tohoto repozitáře:<br />`git@github.com:ENGETO-Java-Akademie-2022-07/du-lekce-03.git`<br />
     Adresu repozitáře najdeš také na GitHubu:<br />
-    ![Adresu repozitáře najdeš také na GitHubu:](img/git_open-repo_01_get-link.png)
+    ![Adresu repozitáře najdeš také na GitHubu:](img/git_open-repo_01_get-link.png)<br />
 4. Naklonuj repozitář:<br />
+    Do kolonky "Directory" zapiš cestu k&nbsp;adresáři, kde máš své projekty.<br />
+    _(Obvykle by ji IntelliJ mělo vyplnit samo podle předchozího nastavení.)_
     ![Naklonuj repozitář](img/git_open-repo_03_clone-repo.png)
-5. Nastav si SDK:<br />
+5. Najdi si třídu `Main`. IDEA tě požádá o nastavení SDK:<br />
+    _(Nabízené SDK se můžou u tebe lišit od obrázku podle toho, jaké máš nainstalovány.)_
     ![Najdi si třídu `Main`. IDEA bude chtít nastavit SDK](img/git_open-repo_04_main-and-sdk.png)
 6. Nyní již můžeš psát kód a spouštět ho.
     ![Spuštění programu](img/git_open-repo_05_run.png)
