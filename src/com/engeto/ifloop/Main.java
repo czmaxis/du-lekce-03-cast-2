@@ -1,8 +1,10 @@
 package com.engeto.ifloop;
+import java.util.ArrayList;
 
 import java.util.List;
 
 public class Main {
+
 
     //region Demo
     /**
@@ -17,6 +19,7 @@ public class Main {
     public static void readOneIntFromInputAndPrintIt() {
         int input = Support.safeReadInt();
         System.out.println("You entered: "+input);
+
     }
     //endregion
 
@@ -28,6 +31,13 @@ public class Main {
      * Jakmile uživatel zadá záporné číslo, metoda skončí.
      */
     public static void readIntsFromInputAndPrintItUntilNegative() {
+        int input = 0;
+         while (input >= 0){
+            input = Support.safeReadInt();
+            if (input < 0) break;
+            System.out.println(input);
+        }
+
     }
 
     /**
@@ -37,7 +47,30 @@ public class Main {
      * @return Součet všech zadaných čísel (záporné číslo ukončující vstup není zahrnuto).
      */
     public static int sumAllInputUntilNegative() {
-        return 0;
+        int sum = 0;
+
+        do {
+
+            int input = Support.safeReadInt();
+
+            if (input < 0) break;
+            sum += input;
+
+        } while (true);
+return sum;
+
+
+
+        //        int input2 = 0;
+//        int sum = 0;
+//        while (input2 >= 0){
+//            input2 = Support.safeReadInt();
+//            if (input2 < 0) break;
+//            sum += input2;
+//        }
+//        sum -= input2;
+//        return input2;
+
     }
 
     /**
@@ -47,7 +80,18 @@ public class Main {
      * @return List načtených hodnot (záporná hodnota není zahrnuta v listu)
      */
     public static List<Integer> storeAllInputInArrayListUntilNegative() {
-        return null;
+
+        int input2 = 0;
+        int sum = 0;
+      List listOfIntegers2 = new ArrayList();
+        while (input2 >= 0){
+
+            input2 = Support.safeReadInt();
+            sum += input2;
+            listOfIntegers2.add(input2);
+        }
+        listOfIntegers2.remove(Integer.valueOf(input2));
+        return listOfIntegers2;
     }
 
     /**
@@ -55,15 +99,44 @@ public class Main {
      * @param list List čísel, která se mají vypsat.
      */
     public static void printAllIntegersFromList(List<Integer> list) {
+        list.clear();
+        int input2 = 0;
+        int sum = 0;
+       // List listOfIntegers3 = new ArrayList();
+        while (input2 >= 0){
+
+            input2 = Support.safeReadInt();
+            sum += input2;
+            list.add(input2);
+        }
+        list.remove(Integer.valueOf(input2));
+        list.forEach(System.out::println);
     }
 
     /**
      * Sečte hodnoty z listu a vrátí výsledek jako návratovou hodnotu.
-     * @param list List čísel, která chceme sečíst.
+     //* @param   čísel, která chceme sečíst.
      * @return Součet všech čísel v listu.
      */
+
+    // ukol 5
     public static Integer sumAllIntegersFromList(List<Integer> list) {
-        return null;
+        list.clear();
+        int input2 = 0;
+//         int sum2 = 0;
+         int sumList = 0;
+      //  List listOfIntegers4 = new ArrayList();
+
+        while (input2 >= 0){
+            input2 = Support.safeReadInt();
+//            sum2 += input2;
+            list.add(input2);
+        }
+        list.remove(Integer.valueOf(input2));
+        sumList = list.stream().reduce(0, Integer::sum);
+
+
+        return sumList;
     }
     //endregion
 
@@ -74,6 +147,23 @@ public class Main {
      * @param limit Limit - vypsána budou pouze čísla z listu, která jsou menší než limit
      */
     public static void printIntegersUnderLimit(List<Integer> list, int limit) {
+        list.clear();
+        int input2 = 0;
+        limit = 5;
+
+        List loopList = new ArrayList<>();
+        while (input2 >= 0){
+            input2 = Support.safeReadInt();
+
+            list.add(input2);
+            if (limit > input2 && input2 >= 0) {
+               loopList.add(input2);
+            }
+        }
+        list.remove(Integer.valueOf(input2));
+        list.forEach(System.out::println);
+        loopList.forEach(System.out::println);
+
     }
 
     /**
@@ -88,6 +178,34 @@ public class Main {
      * @param list Seznam čísel, která se mají vypsat.
      */
     public static void printIntegersWithReplace(List<Integer> list) {
+
+        int input2 = 0;
+        String one = "one";
+        String two = "two";
+        String three = "three";
+
+        //  int sumList = 0;
+
+        List listOfIntegers6 = new ArrayList<>();
+
+        while (input2 >= 0){
+            input2 = Support.safeReadInt();
+            if (input2 == 1){
+                listOfIntegers6.add(one);
+            } else if (input2 == 2) {
+                listOfIntegers6.add(two);
+            } else if (input2 == 3) {
+                listOfIntegers6.add(three);
+            }
+            else
+            listOfIntegers6.add(input2);
+
+            }
+        listOfIntegers6.remove(Integer.valueOf(input2));
+        listOfIntegers6.forEach(System.out::println);
+
+
+
     }
     //endregion
 
